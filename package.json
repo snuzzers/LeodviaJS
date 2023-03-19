@@ -1,0 +1,28 @@
+{
+  "type": "commonjs",
+  "dependencies": {
+    "@types/node": "^18.11.9",
+    "axios": "^1.2.2",
+    "discord.js": "^14.6.0",
+    "dotenv": "^16.0.3",
+    "sqlite3": "^5.1.2",
+    "xml-js": "^1.6.11",
+    "ytdl-core": "^4.11.2"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "dev": "ts-node-dev src/index.ts",
+    "updateCommands": "ts-node src/deployCommands.util.ts",
+    "deleteCommands": "ts-node src/deleteCommands.util.ts"
+  },
+  "name": "leodvia",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0"
+  }
+}
