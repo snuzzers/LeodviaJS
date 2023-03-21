@@ -1,10 +1,16 @@
-import * as dotenv from 'dotenv';
+import * as dotenv from "dotenv";
 dotenv.config();
-import { GatewayIntentBits } from 'discord.js';
-import { Leodvia } from './bot';
+import { GatewayIntentBits, Partials } from "discord.js";
+import { Leodvia } from "./bot";
 
 const client = new Leodvia({
-    intents: [ GatewayIntentBits.Guilds ]
+  partials: [Partials.Channel, Partials.GuildMember, Partials.User],
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMembers,
+    GatewayIntentBits.GuildIntegrations,
+    GatewayIntentBits.GuildVoiceStates,
+  ],
 });
 
 client.login(process.env.TOKEN);
